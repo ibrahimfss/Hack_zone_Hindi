@@ -19,7 +19,9 @@ const IMAGES = {
   WELCOME: "AgACAgUAAxkBAAE_WPJpQlcRHHCFBKbXeo4mOMx5E59GgwACEwxrG4RIEVaxzAABBCYIytgBAAMCAAN3AAM2BA",
   MENU: "AgACAgUAAxkBAAE_V7JpQisvyupOWN12rCB5KISHqdpYqgACoAtrG4RIEVYZJFfTHbvZywEAAwIAA3cAAzYE",
   BONUS: "https://t.me/hostvideobotm/5",
+  SPINS: "https://t.me/hostvideobotm/5",
   VOUCHER: "AgACAgUAAxkBAAE_V_RpQjU-ysbhZR86qF66G6wPmExXQgACtwtrG4RIEVZjwbr-ZJWTbQEAAwIAA3cAAzYE",
+  LUCKY_SPINS: "AgACAgUAAxkBAAE_WXYZ_LUCKY_IMAGE_ID",
   SUPPORT: "AgACAgUAAxkBAAE_WCZpQjxEMKZY_iWH6aXWHahe3K3D0QACwwtrG4RIEVa44l5Q-wFxEwEAAwIAA3cAAzYE",
   PREDICTORS: "AgACAgUAAxkBAAE_WPtpQlgaup56XKvp6TYhUETn2wyMogACFAxrG4RIEVavGP0sC4AIfAEAAwIAA3cAAzYE"
 };
@@ -89,6 +91,10 @@ bot.action("MENU", async (ctx) => {
         [
           Markup.button.callback("🎁 BONUS", "BONUS"),
           Markup.button.callback("🎟 VOUCHER", "VOUCHER")
+        ],
+        [
+          Markup.button.callback("🎰 SPINS", "SPINS"),
+          Markup.button.callback("🍀 LUCKY DRIVE SPINS", "LUCKY_SPINS")
         ],
         [Markup.button.callback("🤖 PREDICTOR BOTS", "PREDICTORS")],
         [Markup.button.callback("🧑‍💻 LIVE SUPPORT", "SUPPORT_OPEN")],
@@ -419,6 +425,88 @@ Click <b>GET VOUCHER</b> to proceed.`,
       reply_markup: {
         inline_keyboard: [
           [{ text: "🎟️ GET VOUCHER", url: "https://t.me/hack_zone_ai" }],
+          [{ text: "⬅️ BACK", callback_data: "MENU" }],
+          [{ text: "📢 OFFICIAL CHANNEL", url: "https://t.me/hack_zone_ai" }]
+        ]
+      }
+    }
+  );
+});
+
+bot.action("SPINS", async (ctx) => {
+  await ctx.answerCbQuery();
+
+  await ctx.editMessageMedia(
+    {
+      type: "photo",
+      media: IMAGES.SPINS,
+      caption:
+`🎰 <b>FREE SPINS OFFER</b>
+
+<i>Get free spins and increase your winning chances instantly.</i>
+
+━━━━━━━━━━━━━━━━━━
+📌 <b>HOW IT WORKS</b>
+━━━━━━━━━━━━━━━━━━
+• Login / Register your account  
+• Make an eligible deposit  
+• Free spins will be credited automatically  
+
+━━━━━━━━━━━━━━━━━━
+⚠️ <b>IMPORTANT</b>
+━━━━━━━━━━━━━━━━━━
+• Spins are subject to wagering rules  
+• Valid for selected games only  
+• One offer per user
+
+Click <b>GET SPINS</b> to continue.`,
+      parse_mode: "HTML"
+    },
+    {
+      reply_markup: {
+        inline_keyboard: [
+          [{ text: "🎰 GET SPINS", url: "https://lkxw.cc/6706" }],
+          [{ text: "⬅️ BACK", callback_data: "MENU" }],
+          [{ text: "📢 OFFICIAL CHANNEL", url: "https://t.me/hack_zone_ai" }]
+        ]
+      }
+    }
+  );
+});
+
+bot.action("LUCKY_SPINS", async (ctx) => {
+  await ctx.answerCbQuery();
+
+  await ctx.editMessageMedia(
+    {
+      type: "photo",
+      media: IMAGES.LUCKY_SPINS,
+      caption:
+`🍀 <b>LUCKY DRIVE SPINS</b>
+
+<i>Spin the lucky drive and unlock premium rewards.</i>
+
+━━━━━━━━━━━━━━━━━━
+🚗 <b>WHY LUCKY DRIVE?</b>
+━━━━━━━━━━━━━━━━━━
+• Higher win probability  
+• Exclusive spin rewards  
+• Limited-time event  
+
+━━━━━━━━━━━━━━━━━━
+⚠️ <b>NOTICE</b>
+━━━━━━━━━━━━━━━━━━
+• Available for eligible users only  
+• Rewards depend on activity level  
+• Terms & conditions apply
+
+Click <b>TRY YOUR LUCK</b> now.`,
+      parse_mode: "HTML"
+    },
+    {
+      reply_markup: {
+        inline_keyboard: [
+          [{ text: "🍀 TRY YOUR LUCK", url: "https://lkxw.cc/6706" }],
           [{ text: "⬅️ BACK", callback_data: "MENU" }],
           [{ text: "📢 OFFICIAL CHANNEL", url: "https://t.me/hack_zone_ai" }]
         ]
