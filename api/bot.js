@@ -94,7 +94,7 @@ bot.action("MENU", async (ctx) => {
         ],
         [
           Markup.button.callback("🎰 SPINS", "SPINS"),
-          Markup.button.callback("🍀 LUCKY DRIVE SPINS", "LUCKY_SPINS")
+          Markup.button.callback("🍀 LUCKY DRIVE", "LUCKY_SPINS")
         ],
         [Markup.button.callback("🤖 PREDICTOR BOTS", "PREDICTORS")],
         [Markup.button.callback("🧑‍💻 LIVE SUPPORT", "SUPPORT_OPEN")],
