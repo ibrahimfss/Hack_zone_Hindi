@@ -520,7 +520,7 @@ driving away in brand-new supercars and enjoying a luxury lifestyle.</i>
 How? By collecting Golden Tickets in the Free Money section and participating in the Lucky Drive.
 
 ━━━━━━━━━━━━━━━━━━
-🚗 <b>LUCKY DRIVE – SEASON REWARDS</b>
+🚗 <b>Lucky Drive – Season Rewards</b>
 ━━━━━━━━━━━━━━━━━━
 • 🏆 Grand Prize  
 • Porsche GT3 RS  
@@ -528,19 +528,19 @@ How? By collecting Golden Tickets in the Free Money section and participating in
 • Limited-time event  
 
 ━━━━━━━━━━━━━━━━━━
-⚠️ <b>PREMIUM ADDITIONAL PRIZES</b>
+⚠️ <b>Premium Additional Prizes</b>
 ━━━━━━━━━━━━━━━━━━
 • iPhone 17 Pro Max  
 • MacBook Pro 14" (M3)  
 • AirPods Max  
 
 ━━━━━━━━━━━━━━━━━━
-🎰 <b>BONUS FOR PARTICIPANTS</b>
+🎰 <b>Bonus for Participants</b>
 ━━━━━━━━━━━━━━━━━━
 • Free Spins for everyone who collects 7 or more tickets  
 
 ━━━━━━━━━━━━━━━━━━
-⚠️ <b>PARTICIPATION REQUIREMENT</b>
+⚠️ <b>Participation Requirement</b>
 ━━━━━━━━━━━━━━━━━━
 To take part in the Lucky Drive, your account must have at least one deposit of $10 or more.
 
