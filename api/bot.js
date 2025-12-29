@@ -38,14 +38,14 @@ const IMAGES = {
   WELCOME: "AgACAgUAAxkBAAIB6GlRL4tNmesNDlZKE-BAuPOfO-fDAAJHC2sbK_2QVnbvKfPgdG7GAQADAgADdwADNgQ",
   MENU: "AgACAgUAAxkBAAIB5mlRLwdG-hn_vIpTaswy-UWhuv_OAAJDC2sbK_2QVoc5iv0BFAFZAQADAgADdwADNgQ",
   BONUS: "AgACAgUAAxkBAAIB-GlSAAFsQx2Qhbib5gbivNbbHNbD9AACjAtrG8JqkFb95Sa8iSQkmAEAAwIAA3cAAzYE",
-  SPINS: "AgACAgUAAxkBAAE_WPJpQlcRHHCFBKbXeo4mOMx5E59GgwACEwxrG4RIEVaxzAABBCYIytgBAAMCAAN3AAM2BA",
-  VOUCHER: "AgACAgUAAxkBAAE_V_RpQjU-ysbhZR86qF66G6wPmExXQgACtwtrG4RIEVZjwbr-ZJWTbQEAAwIAA3cAAzYE",
-  LUCKY_SPINS: "AgACAgUAAxkBAAE_WPJpQlcRHHCFBKbXeo4mOMx5E59GgwACEwxrG4RIEVaxzAABBCYIytgBAAMCAAN3AAM2BA",
+  VOUCHER: "AgACAgUAAxkBAAICAmlSAdft_J24YJT_n0iyiJ7khlFuAAKYC2sbwmqQVsOxfj7UvrNZAQADAgADdwADNgQ",
   SUPPORT: "AgACAgUAAxkBAAIB6mlRL_gQr0Jn0rvlrL8OI4WV0A1AAAKqC2sbeyeJVl1st_Bn_iU8AQADAgADdwADNgQ",
   PREDICTORS: "AgACAgUAAxkBAAE_WPtpQlgaup56XKvp6TYhUETn2wyMogACFAxrG4RIEVavGP0sC4AIfAEAAwIAA3cAAzYE"
 };
 const VIDEOS = {
   WITHDRAW: "BAACAgUAAxkBAAIB8mlR-_vzDdyUn2jSd3zPJt4_YnFxAAKZFwACeyeJVkjbEqiNIURoNgQ",
+  SPINS: "BAACAgUAAxkBAAICBGlSApR1BOsJpqQ0tQfhsy5Si2qHAAJjFgACwmqQVhG27zp0VhnqNgQ",
+  LUCKY_SPINS: "AgACAgUAAxkBAAE_WPJpQlcRHHCFBKbXeo4mOMx5E59GgwACEwxrG4RIEVaxzAABBCYIytgBAAMCAAN3AAM2BA",
   DEPOSIT: "BAACAgUAAxkBAAIB9GlR_M6f8kZ58qdPZzC3Y6NyiBv3AAKVFwACeyeJVnGQJJ9MZmxvNgQ"
 };
 
@@ -469,8 +469,8 @@ bot.action("SPINS", async (ctx) => {
 
   await ctx.editMessageMedia(
     {
-      type: "photo",
-      media: IMAGES.SPINS,
+      type: "video",
+      media: VIDEOS.SPINS,
       caption:
 `🎰 <b>FREE SPINS OFFER</b>
 
@@ -510,8 +510,8 @@ bot.action("LUCKY_SPINS", async (ctx) => {
 
   await ctx.editMessageMedia(
     {
-      type: "photo",
-      media: IMAGES.LUCKY_SPINS,
+      type: "video",
+      media: VIDEOS.LUCKY_SPINS,
       caption:
 `🍀 <b>LUCKY DRIVE SPINS</b>
 
