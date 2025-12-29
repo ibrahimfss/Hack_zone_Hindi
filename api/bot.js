@@ -46,7 +46,7 @@ const IMAGES = {
 };
 const VIDEOS = {
   WITHDRAW: "BAACAgUAAxkBAAIB8mlR-_vzDdyUn2jSd3zPJt4_YnFxAAKZFwACeyeJVkjbEqiNIURoNgQ",
-  DEPOSIT: "BAACAgUAAxkBAAE_TaJpQQmxESqpxdndUCAAAW9klvnE1SwAArAbAAKyuAhW21yLxSAAARvyNgQ"
+  DEPOSIT: "BAACAgUAAxkBAAIB9GlR_M6f8kZ58qdPZzC3Y6NyiBv3AAKVFwACeyeJVnGQJJ9MZmxvNgQ"
 };
 
 /* =====================
