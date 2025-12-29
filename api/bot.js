@@ -297,7 +297,7 @@ bot.action("WITHDRAW", (ctx) =>
 ━━━━━━━━━━━━━━━━━━
 ⏳ *PROCESSING TIME*
 ━━━━━━━━━━━━━━━━━━
-• E-wallets / UPI: Usually within 
+• Crypto / UPI: Usually within 
 5–30 minutes  
 • Bank transfer: Up to 24 hours
 
@@ -343,13 +343,13 @@ bot.action("DEPOSIT", (ctx) =>
 ‎━━━━━━━━━━━━━━━━━━
 ‎⚡ *DEPOSIT PROCESSING TIME*
 ‎━━━━━━━━━━━━━━━━━━
-‎• UPI / E-wallets: Instant to a few minutes  
+‎• UPI / Crypto: Instant to a few minutes  
 ‎• Bank transfer: May take up to 15–30 minutes 
 ‎
 ‎━━━━━━━━━━━━━━━━━━
 ‎🎁 *BONUS & PROMOCODE*
 ‎━━━━━━━━━━━━━━━━━━
-‎• Enter the correct *promocode* \`OGGY\` during Registration to receive *600% deposit bonuses*  
+‎• Enter the correct *promocode* \`SUMSUNG\` during Registration to receive *600% deposit bonuses*  
 ‎• Bonuses are subject to wagering requirements  
 ‎• Incorrect or missing promocode may void the bonus
 ‎
