@@ -378,24 +378,36 @@ bot.action("BONUS", (ctx) =>
     {
       type: "photo",
       media: IMAGES.BONUS,
-      caption: `‎🎁 *EXCLUSIVE DEPOSIT BONUS*
-‎
-‎_Use the special promocode below during registration & deposit to unlock your bonus:_
-‎
-‎━━━━━━━━━━━━━━━━━━
-‎🎯 *PROMOCODE:* \`OGGY\`
-‎💥 *BONUS: GET UP TO 600%*\n+500 Free Spins
-‎━━━━━━━━━━━━━━━━━━
-‎
-‎📌 *IMPORTANT:*
-‎• Promocode must be entered before confirming the registration or deposit 
-‎• Bonus is applicable on eligible deposits only  
-‎• Bonus funds are subject to wagering requirements  
-‎• One bonus per user / per account
-‎
-‎Deposit now and maximize your winning potential.
-‎
-‎Click *CLAIM BONUS* to proceed.`,
+      caption: caption: `🎁 *EXCLUSIVE DEPOSIT BONUS*
+
+_Express bonus - when making an express bet with 5 or more events, a percentage of the winning amount is added to the net profit._
+
+Use the special *promocode* \`JADAFIRE\` during registration & deposit to unlock your bonuses.
+
+━━━━━━━━━━━━━━━━━━
+💱 *CASHBACK*
+━━━━━━━━━━━━━━━━━━
+• Cashback up to 30% at the casino - return up to *30%* of your losses per week.
+━━━━━━━━━━━━━━━━━━
+🎁 *BONUSES*
+━━━━━━━━━━━━━━━━━━
+• Bonuses up to *500%* - welcome bonuses on the first 4 deposits.
+
+• Bonuses up to *600%* - welcome bonuses for the first 4 deposits in cryptocurrency.
+
+━━━━━━━━━━━━━━━━━━
+🎯 *BONUS CODE:* \`JADAFIRE\`
+━━━━━━━━━━━━━━━━━━
+
+📌 *IMPORTANT:*
+• *Promocode* \`JADAFIRE\` must be entered before confirming the registration or deposit
+• Bonus is applicable on eligible deposits only
+
+You can find out more about all promotions and bonuses by following *CLAIM BONUS* button.
+
+_Deposit now and maximize your winning potential._
+
+Click *CLAIM BONUS* to proceed.`,
       parse_mode: "Markdown"
     },
     {
