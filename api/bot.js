@@ -378,7 +378,7 @@ bot.action("BONUS", (ctx) =>
     {
       type: "photo",
       media: IMAGES.BONUS,
-      caption: caption: `🎁 *EXCLUSIVE DEPOSIT BONUS*
+      caption: `🎁 *EXCLUSIVE DEPOSIT BONUS*
 
 _Express bonus - when making an express bet with 5 or more events, a percentage of the winning amount is added to the net profit._
 
