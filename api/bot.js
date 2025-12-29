@@ -382,7 +382,7 @@ bot.action("BONUS", (ctx) =>
 
 _Express bonus - when making an express bet with 5 or more events, a percentage of the winning amount is added to the net profit._
 
-Use the special *promocode* \`JADAFIRE\` during registration & deposit to unlock your bonuses.
+Use the special *promocode* \`SUMSUNG\` during registration & deposit to unlock your bonuses.
 
 ━━━━━━━━━━━━━━━━━━
 💱 *CASHBACK*
@@ -396,11 +396,11 @@ Use the special *promocode* \`JADAFIRE\` during registration & deposit to unlock
 • Bonuses up to *600%* - welcome bonuses for the first 4 deposits in cryptocurrency.
 
 ━━━━━━━━━━━━━━━━━━
-🎯 *BONUS CODE:* \`JADAFIRE\`
+🎯 *BONUS CODE:* \`SUMSUNG\`
 ━━━━━━━━━━━━━━━━━━
 
 📌 *IMPORTANT:*
-• *Promocode* \`JADAFIRE\` must be entered before confirming the registration or deposit
+• *Promocode* \`SUMSUNG\` must be entered before confirming the registration or deposit
 • Bonus is applicable on eligible deposits only
 
 You can find out more about all promotions and bonuses by following *CLAIM BONUS* button.
