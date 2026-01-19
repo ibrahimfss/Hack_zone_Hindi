@@ -698,8 +698,11 @@ bot.action(/^ADMIN_USER_LIST_(\d+)$/, async (ctx) => {
   const endIdx = startIdx + usersPerPage;
   const pageUsers = allUsers.slice(startIdx, endIdx);
   
-  let caption = `👥 *USER LIST (Page ${page}/${totalPages})*\n\n`;
+  // ✅ NEW: Better formatting
+  let caption = `👥 *USER LIST (Page ${page}/${totalPages})*\n`;
+  caption += `👤 *Total Users:* ${allUsers.length}\n\n`;
   
+  // Create buttons array
   const buttons = pageUsers.map(user => [
     {
       text: `${user.active ? '✅' : '❌'} ${user.firstName} (${user.id})`,
