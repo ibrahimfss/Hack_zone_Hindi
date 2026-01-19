@@ -306,13 +306,26 @@ bot.on("message", async (ctx) => {
     return;
   }
   
-  /* ADMIN MESSAGE */
+    /* ADMIN MESSAGE */
   if (ctx.from.id === ADMIN_ID) {
     const targetUser = adminReplyTarget.get(ctx.from.id);
     if (!targetUser) return;
 
-    await ctx.copyMessage(targetUser);
-    adminReplyTarget.delete(ctx.from.id);
+    try {
+      await ctx.copyMessage(targetUser);
+      adminReplyTarget.delete(ctx.from.id);
+      
+      // ✅ Confirm to admin
+      await ctx.reply(
+        `✅ *Message sent successfully to user ID:* \`${targetUser}\``,
+        { parse_mode: "Markdown" }
+      );
+    } catch (error) {
+      await ctx.reply(
+        `❌ *Failed to send message to user ID:* \`${targetUser}\`\n\nError: ${error.message}`,
+        { parse_mode: "Markdown" }
+      );
+    }
     return;
   }
 
