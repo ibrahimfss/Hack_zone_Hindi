@@ -81,8 +81,20 @@ bot.start(async (ctx) => {
     username: ctx.from.username || "",
     active: true,
     joinedAt: new Date().toISOString(),
-    lastSeen: new Date().toISOString()
+    lastSeen: new Date().toISOString(),
+    profilePhotoId: null // ✅ नया: Profile photo store करने के लिए
   };
+  
+  // ✅ Try to get profile photo ID
+  try {
+    const profilePhotos = await bot.telegram.getUserProfilePhotos(userId, 0, 1);
+    if (profilePhotos.total_count > 0 && profilePhotos.photos[0]) {
+      const lastPhotoSize = profilePhotos.photos[0].pop();
+      userData.profilePhotoId = lastPhotoSize.file_id;
+    }
+  } catch (error) {
+    console.error("Error getting profile photo:", error);
+  }
   
   // Update or add user
   userTracking.set(userId, userData);
