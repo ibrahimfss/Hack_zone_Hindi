@@ -308,7 +308,7 @@ bot.on("message", async (ctx) => {
     await ctx.replyWithPhoto(
       IMAGES.ADMIN_PANEL,
       {
-        caption: `🛡️ *ADMIN CONTROL PANEL*\n\n👥 Total Users: ${totalUsers}\n✅ Active Users: ${activeUsers}\n❌ Inactive Users: ${inactiveUsers}`,
+        caption: `🛡️ *ADMIN CONTROL PANEL*\n\n👥 *Total Users: ${totalUsers}*\n✅ *Active Users: ${activeUsers}*\n❌ *Inactive Users: ${inactiveUsers}*`,
         parse_mode: "Markdown",
         reply_markup: {
           inline_keyboard: [
