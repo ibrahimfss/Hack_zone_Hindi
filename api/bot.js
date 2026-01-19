@@ -45,19 +45,22 @@ let broadcastMode = new Map(); // ✅ नया: Broadcast mode track करन�
 ===================== */
 bot.start(async (ctx) => {
   const firstName = ctx.from.first_name || "User";
-   // ✅ यह code पहली line में paste करें
   const userId = ctx.from.id;
   
-  // User tracking में add करें
-  userTracking.set(userId, {
+  // ✅ IMPROVED: Better user tracking
+  const userData = {
     id: userId,
     firstName: ctx.from.first_name || "User",
     lastName: ctx.from.last_name || "",
     username: ctx.from.username || "",
     active: true,
-    joinedAt: new Date()
-  });
-
+    joinedAt: new Date().toISOString(),
+    lastSeen: new Date().toISOString()
+  };
+  
+  // Update or add user
+  userTracking.set(userId, userData);
+  
   await ctx.replyWithPhoto(
     IMAGES.WELCOME,
     {
