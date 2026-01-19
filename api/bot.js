@@ -747,8 +747,11 @@ bot.action(/^ADMIN_USER_DETAILS_(\d+)_(\d+)$/, async (ctx) => {
     return;
   }
   
+  // ✅ NEW: Better formatting with exact spacing
+  const fullName = `${user.firstName} ${user.lastName || ''}`.trim();
+  
   await ctx.editMessageCaption(
-`👤 *USER DETAILS*\n\n👤: ${user.firstName} ${user.lastName}\n🆔: ${user.id}\n👤: @${user.username || 'No username'}\nStatus: ${user.active ? '✅ ACTIVE' : '❌ INACTIVE'}`,
+`👤 *USER DETAILS*\n\n👤: ${fullName}\n🆔: ${user.id}\n👤: @${user.username || 'No username'}\nStatus: ${user.active ? '✅ ACTIVE' : '❌ INACTIVE'}`,
     {
       parse_mode: "Markdown",
       reply_markup: {
