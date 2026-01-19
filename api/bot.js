@@ -768,15 +768,16 @@ bot.action(/^ADMIN_USER_DETAILS_(\d+)_(\d+)$/, async (ctx) => {
   
   // ✅ NEW: Better formatting with exact spacing
   const fullName = `${user.firstName} ${user.lastName || ''}`.trim();
+  const escapedUsername = user.username ? `@${escapeMarkdown(user.username)}` : "No username";
   
   await ctx.editMessageCaption(
-`👤 *USER DETAILS*\n\n👤: ${fullName}\n🆔: ${user.id}\n👤: @${user.username || 'No username'}\nStatus: ${user.active ? '✅ ACTIVE' : '❌ INACTIVE'}`,
+`👤 *USER DETAILS*\n\n👤: ${escapeMarkdown(fullName)}\n🆔: \`${user.id}\`\n👤: ${escapedUsername}\n*Status*: ${user.active ? '✅ ACTIVE' : '❌ INACTIVE'}`,
     {
       parse_mode: "Markdown",
       reply_markup: {
         inline_keyboard: [
           [
-            { text: "📩 MSG", callback_data: `ADMIN_USER_MSG_${userId}` },
+            { text: "📩 MSG", callback_data: `ADMIN_USER_MSG_${userId}_${page}` },
             { text: "👁️ VIEW", url: `tg://user?id=${userId}` }
           ],
           [{ text: "⬅️ Back to List", callback_data: `ADMIN_USER_LIST_${page}` }]
