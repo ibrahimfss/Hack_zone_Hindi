@@ -769,12 +769,12 @@ bot.action(/^ADMIN_USER_MSG_(\d+)$/, async (ctx) => {
   adminReplyTarget.set(ctx.from.id, userId);
   
   await ctx.editMessageCaption(
-    `✍️ *TYPE YOUR MESSAGE FOR USER*\n\nUser ID: ${userId}\n\nSend text, photo, or video with caption.`,
+    `✍️ *TYPE YOUR MESSAGE FOR USER*\n\nUser ID: \`${userId}\`\n\nSend text, photo, or video with caption.`,
     {
       parse_mode: "Markdown",
       reply_markup: {
         inline_keyboard: [
-          [{ text: "❌ Cancel", callback_data: "ADMIN_PANEL" }]
+          [{ text: "❌ Cancel", callback_data: `ADMIN_USER_DETAILS_${userId}_1` }]
         ]
       }
     }
