@@ -12,25 +12,6 @@ if (!BOT_TOKEN || !ADMIN_ID) {
 
 const bot = new Telegraf(BOT_TOKEN);
 
-bot.on("photo", async (ctx) => {
-  if (ctx.from.id !== ADMIN_ID) return;
-  const photo = ctx.message.photo.pop();
-  console.log("PHOTO FILE_ID:", photo.file_id);
-  await ctx.reply("Photo Saved ✔️ Check Vercel Logs");
-});
-
-bot.on("video", async (ctx) => {
-  if (ctx.from.id !== ADMIN_ID) return;
-  console.log("VIDEO FILE_ID:", ctx.message.video.file_id);
-  await ctx.reply("Video Saved ✔️ Check Vercel Logs");
-});
-
-bot.on("animation", async (ctx) => {
-  if (ctx.from.id !== ADMIN_ID) return;
-  console.log("GIF FILE_ID:", ctx.message.animation.file_id);
-  await ctx.reply("GIF Saved ✔️ Check Vercel Logs");
-});
-
 // ✅ NEW: Function to escape Markdown characters
 function escapeMarkdown(text) {
   if (!text) return text;
@@ -46,9 +27,9 @@ const IMAGES = {
   BONUS: "AgACAgUAAxkBAAICCmlSBK8KdNEghljYFkwNaFTawWhhAAKvC2sbwmqQVlZpWW1sZJkCAQADAgADdwADNgQ",
   VOUCHER: "AgACAgUAAxkBAAICAmlSAdft_J24YJT_n0iyiJ7khlFuAAKYC2sbwmqQVsOxfj7UvrNZAQADAgADdwADNgQ",
   SUPPORT: "AgACAgUAAxkBAAIB6mlRL_gQr0Jn0rvlrL8OI4WV0A1AAAKqC2sbeyeJVl1st_Bn_iU8AQADAgADdwADNgQ",
-  ADMIN_PANEL: "AgACAgUAAxkBAAIB6GlRL4tNmesNDlZKE-BAuPOfO-fDAAJHC2sbK_2QVnbvKfPgdG7GAQADAgADdwADNgQ",
-  BROADCAST: "AgACAgUAAxkBAAIB5mlRLwdG-hn_vIpTaswy-UWhuv_OAAJDC2sbK_2QVoc5iv0BFAFZAQADAgADdwADNgQ",
-  USER_LIST: "AgACAgUAAxkBAAIB6mlRL_gQr0Jn0rvlrL8OI4WV0A1AAAKqC2sbeyeJVl1st_Bn_iU8AQADAgADdwADNgQ",
+  ADMIN_PANEL: "AgACAgUAAxkBAAICzGlt4Lm0jGRIbvi09RuqcmX223YDAAIVDmsbdPlxV7nnwJsyPWSAAQADAgADdwADOAQ",
+  BROADCAST: "AgACAgUAAxkBAAICymlt4IuMBjvA0cR60VJrgVBuEvDKAAISDmsbdPlxV4tZDCnHYUiRAQADAgADdwADOAQ",
+  USER_LIST: "AgACAgUAAxkBAAICxGlt1mROzksoWzsx2SzOjeYIvttXAAL3DWsbdPlxV0JCDbYZ6O-qAQADAgADeQADOAQ",
   PREDICTORS: "AgACAgUAAxkBAAICCGlSBGBMSq_-tBKJxLIR0imS0zm-AAKtC2sbeyeJVoBzwZ_rcpXDAQADAgADdwADNgQ"
 };
 const VIDEOS = {
