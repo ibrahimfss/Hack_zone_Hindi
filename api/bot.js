@@ -110,6 +110,32 @@ To continue and access support options, please click the *CONTINUE* button below
    MAIN MENU (EDIT MEDIA)
 ===================== */
 bot.action("MENU", async (ctx) => {
+  const isAdmin = ctx.from.id === ADMIN_ID;
+  
+  const menuButtons = [
+    [
+      Markup.button.callback("💸 WITHDRAW", "WITHDRAW"),
+      Markup.button.callback("💳 DEPOSIT", "DEPOSIT")
+    ],
+    [
+      Markup.button.callback("🎁 BONUS", "BONUS"),
+      Markup.button.callback("🎟 VOUCHER", "VOUCHER")
+    ],
+    [
+      Markup.button.callback("🎰 SPINS", "SPINS"),
+      Markup.button.callback("🍀 LUCKY DRIVE", "LUCKY_SPINS")
+    ],
+    [Markup.button.callback("🤖 PREDICTOR BOTS", "PREDICTORS")],
+    [Markup.button.callback("🧑‍💻 LIVE SUPPORT", "SUPPORT_OPEN")],
+  ];
+  
+  // ✅ सिर्फ Admin के लिए Admin Panel button add करें
+  if (isAdmin) {
+    menuButtons.push([Markup.button.callback("🛡️ ADMIN PANEL", "ADMIN_PANEL")]);
+  }
+  
+  menuButtons.push([Markup.button.url("📢 OFFICIAL CHANNEL", "https://t.me/hack_zone_ai")]);
+  
   await ctx.editMessageMedia(
     {
       type: "photo",
@@ -118,23 +144,7 @@ bot.action("MENU", async (ctx) => {
       parse_mode: "Markdown"
     },
     {
-      ...Markup.inlineKeyboard([
-        [
-          Markup.button.callback("💸 WITHDRAW", "WITHDRAW"),
-          Markup.button.callback("💳 DEPOSIT", "DEPOSIT")
-        ],
-        [
-          Markup.button.callback("🎁 BONUS", "BONUS"),
-          Markup.button.callback("🎟 VOUCHER", "VOUCHER")
-        ],
-        [
-          Markup.button.callback("🎰 SPINS", "SPINS"),
-          Markup.button.callback("🍀 LUCKY DRIVE", "LUCKY_SPINS")
-        ],
-        [Markup.button.callback("🤖 PREDICTOR BOTS", "PREDICTORS")],
-        [Markup.button.callback("🧑‍💻 LIVE SUPPORT", "SUPPORT_OPEN")],
-        [Markup.button.url("📢 OFFICIAL CHANNEL", "https://t.me/hack_zone_ai")]
-      ])
+      ...Markup.inlineKeyboard(menuButtons)
     }
   );
 });
