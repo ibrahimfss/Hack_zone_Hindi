@@ -29,7 +29,7 @@ const IMAGES = {
   SUPPORT: "AgACAgUAAxkBAAIB6mlRL_gQr0Jn0rvlrL8OI4WV0A1AAAKqC2sbeyeJVl1st_Bn_iU8AQADAgADdwADNgQ",
   ADMIN_PANEL: "AgACAgUAAxkBAAIB6GlRL4tNmesNDlZKE-BAuPOfO-fDAAJHC2sbK_2QVnbvKfPgdG7GAQADAgADdwADNgQ",
   BROADCAST: "AgACAgUAAxkBAAIB5mlRLwdG-hn_vIpTaswy-UWhuv_OAAJDC2sbK_2QVoc5iv0BFAFZAQADAgADdwADNgQ",
-  USERS: "AgACAgUAAxkBAAIB6mlRL_gQr0Jn0rvlrL8OI4WV0A1AAAKqC2sbeyeJVl1st_Bn_iU8AQADAgADdwADNgQ",
+  USER_LIST: "AgACAgUAAxkBAAIB6mlRL_gQr0Jn0rvlrL8OI4WV0A1AAAKqC2sbeyeJVl1st_Bn_iU8AQADAgADdwADNgQ",
   PREDICTORS: "AgACAgUAAxkBAAICCGlSBGBMSq_-tBKJxLIR0imS0zm-AAKtC2sbeyeJVoBzwZ_rcpXDAQADAgADdwADNgQ"
 };
 const VIDEOS = {
@@ -706,7 +706,7 @@ bot.action("ADMIN_PANEL", async (ctx) => {
   );
 });
 
-// ✅ USER LIST WITH PAGINATION
+// ✅ USER LIST WITH PAGINATION (WITH IMAGE)
 bot.action(/^ADMIN_USER_LIST_(\d+)$/, async (ctx) => {
   if (ctx.from.id !== ADMIN_ID) return;
   
@@ -718,7 +718,7 @@ bot.action(/^ADMIN_USER_LIST_(\d+)$/, async (ctx) => {
   const endIdx = startIdx + usersPerPage;
   const pageUsers = allUsers.slice(startIdx, endIdx);
   
-  // ✅ NEW: Better formatting
+  // ✅ NEW: Image with caption
   let caption = `👥 *USER LIST (Page ${page}/${totalPages})*\n`;
   caption += `👤 *Total Users:* ${allUsers.length}\n\n`;
   
@@ -745,10 +745,14 @@ bot.action(/^ADMIN_USER_LIST_(\d+)$/, async (ctx) => {
   
   buttons.push([{ text: "⬅️ Back to Admin Panel", callback_data: "ADMIN_PANEL" }]);
   
-  await ctx.editMessageCaption(
-    caption,
+  await ctx.editMessageMedia(
     {
-      parse_mode: "Markdown",
+      type: "photo",
+      media: IMAGES.USER_LIST, // ✅ Image show होगा
+      caption: caption,
+      parse_mode: "Markdown"
+    },
+    {
       reply_markup: { inline_keyboard: buttons }
     }
   );
