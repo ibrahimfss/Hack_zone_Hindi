@@ -788,10 +788,11 @@ bot.action(/^ADMIN_USER_DETAILS_(\d+)_(\d+)$/, async (ctx) => {
 });
 
 // ✅ ADMIN SEND MESSAGE TO USER
-bot.action(/^ADMIN_USER_MSG_(\d+)$/, async (ctx) => {
+bot.action(/^ADMIN_USER_MSG_(\d+)_(\d+)$/, async (ctx) => {
   if (ctx.from.id !== ADMIN_ID) return;
   
   const userId = parseInt(ctx.match[1]);
+  const page = parseInt(ctx.match[2]);
   adminReplyTarget.set(ctx.from.id, userId);
   
   await ctx.editMessageCaption(
@@ -800,7 +801,7 @@ bot.action(/^ADMIN_USER_MSG_(\d+)$/, async (ctx) => {
       parse_mode: "Markdown",
       reply_markup: {
         inline_keyboard: [
-          [{ text: "❌ Cancel", callback_data: `ADMIN_USER_DETAILS_${userId}_1` }]
+          [{ text: "❌ Cancel", callback_data: `ADMIN_USER_DETAILS_${userId}_${page}` }]
         ]
       }
     }
