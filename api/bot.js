@@ -788,7 +788,7 @@ bot.action("ADMIN_BROADCAST", async (ctx) => {
     {
       type: "photo",
       media: IMAGES.BROADCAST,
-      caption: `📢 *BROADCAST MESSAGE*\n\nType message to send to ALL users.\n\nClick 'CANCEL' to abort.`,
+      caption: `📢 *BROADCAST MESSAGE*\n\nType message to send to *ALL users*.\n\nClick *CANCEL* to abort.`,
       parse_mode: "Markdown"
     },
     {
