@@ -56,6 +56,8 @@ const VIDEOS = {
 ===================== */
 const openTickets = new Map();
 const adminReplyTarget = new Map();
+const userTracking = new Map(); // ✅ नया: Users को track करने के लिए
+let broadcastMode = new Map(); // ✅ नया: Broadcast mode track करने के लिए
 
 /* =====================
    START
